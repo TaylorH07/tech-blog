@@ -101,8 +101,8 @@ router.post('/login', (req, res) => {
 
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
-        req.session.destroy(() => {
-        res.status(204).end();
+            req.session.destroy(() => {
+            res.status(204).end();
         });
     }
     else {
@@ -124,7 +124,7 @@ router.put('/:id', (req, res) => {
             return;
         }
         res.json(userData);
-        })
+    })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
