@@ -18,7 +18,7 @@ async function newFormHandler(event) {
     if (response.ok) {
         document.location.replace('/dashboard');
     } else {
-        alert(response.statusText);
+        alert('Please enter .com on post link form.');
     }
 }
   
